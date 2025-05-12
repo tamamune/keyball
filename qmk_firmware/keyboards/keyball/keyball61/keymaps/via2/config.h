@@ -14,7 +14,19 @@
 #endif
 
 #define TAP_CODE_DELAY 5
-
-#define POINTING_DEVICE_AUTO_MOUSE_ENABLE
-#define AUTO_MOUSE_DEFAULT_LAYER 4
+// レイヤー数
 #define DYNAMIC_KEYMAP_LAYER_COUNT 5
+
+// キー長押し時間 ミリ秒
+#define TAPPING_TERM 180
+
+// AML有効化
+#define POINTING_DEVICE_AUTO_MOUSE_ENABLE
+// 切り替えるマウスレイヤー番号を指定
+#define AUTO_MOUSE_DEFAULT_LAYER 4
+// マウスが止まってから元のレイヤーに戻るまでの時間(ms)
+#define AUTO_MOUSE_TIME 500
+// マウス速度 (default: 500)
+#define KEYBALL_CPI_DEFAULT 1100
+// スクロール速度 (default: 4)
+#define KEYBALL_SCROLL_DIV_DEFAULT 5
