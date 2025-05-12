@@ -48,7 +48,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 layer_state_t layer_state_set_user(layer_state_t state) {
     // Auto enable scroll mode when the highest layer is 3
-    keyball_set_scroll_mode(get_highest_layer(state) == 1);
+    keyball_set_scroll_mode(get_highest_layer(state) == 3);
 
     // レイヤー毎のカラー指定 MAGENTA BLUE YELLOW RED WHITE GREEN
     state = update_tri_layer_state(state, 1, 2, 3);
