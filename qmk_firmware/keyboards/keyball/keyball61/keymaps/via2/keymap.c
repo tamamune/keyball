@@ -2,7 +2,7 @@
 
 #include "quantum.h"
 
-//MO(4)
+//MO(4) TT(4)
 
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
