@@ -1,7 +1,5 @@
 #pragma once
 
-#define LAYER_STATE_8BIT
-
 #ifdef RGBLIGHT_ENABLE
 //#    define RGBLIGHT_EFFECT_BREATHING
 //#    define RGBLIGHT_EFFECT_RAINBOW_MOOD
