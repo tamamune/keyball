@@ -6,3 +6,5 @@ VIA_ENABLE = yes
 
 EXTRAKEY_ENABLE = yes
 COMBO_ENABLE = yes
+
+MUSIC_ENABLE = no
