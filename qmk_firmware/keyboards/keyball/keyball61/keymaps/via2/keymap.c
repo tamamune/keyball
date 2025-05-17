@@ -105,3 +105,20 @@ bool oled_task_user(void) {
     }
     return true;
 }
+
+enum my_keyball_keycodes {
+    // 既存の末尾に追加
+    OLED_IN,  // OLED ページ変更
+};
+
+// キーマップの任意の場所に「OLED_IN」を追加 
+// 例：
+//  [3] = LAYOUT_universal(
+//    RGB_TOG  , OLED_IN
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        // 既存switch文にcaseを追加
+        case OLED_IN: change_page(record->event.pressed); return true;
+        default: break;
+    }
