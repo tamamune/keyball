@@ -1,5 +1,4 @@
 #include QMK_KEYBOARD_H
-
 #include "quantum.h"
 
 enum my_keyball_keycodes {
@@ -79,7 +78,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     return state;
 }
 
-// #ifdef OLED_ENABLE
+#ifdef OLED_ENABLE
 
 // https://mazcon.hatenablog.com/entry/2023/11/20/022521
 #include "lib/oledkit/oledkit.h"
@@ -111,7 +110,6 @@ bool oled_task_user(void) {
     }
     return true;
 }
-// #endif
 
 // キーマップの任意の場所に「OLED_IN」を追加 
 // 例：
