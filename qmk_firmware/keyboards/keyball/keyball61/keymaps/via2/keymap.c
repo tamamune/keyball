@@ -124,3 +124,5 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case OLED_IN: change_page(record->event.pressed); return true;
         default: break;
     }
+    return true;
+}
