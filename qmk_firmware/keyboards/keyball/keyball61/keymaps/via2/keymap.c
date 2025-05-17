@@ -54,28 +54,6 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     // Auto enable scroll mode when the highest layer is 3
     keyball_set_scroll_mode(get_highest_layer(state) == 3);
     return state;
-  
-    // レイヤー毎のカラー指定 MAGENTA BLUE YELLOW RED WHITE GREEN
-    state = update_tri_layer_state(state, 1, 2, 3);
-    uint8_t layer = biton32(state);
-    switch (layer) {
-        case 0:
-            rgblight_sethsv(HSV_MAGENTA);
-            break;
-        case 1:
-            rgblight_sethsv(HSV_BLUE);
-            break;
-        case 2:
-            rgblight_sethsv(HSV_RED);
-            break;
-        case 3:
-            rgblight_sethsv(HSV_RED);
-            break;
-        case 4:
-            rgblight_sethsv(HSV_WHITE);
-            break;
-    }
-    return state;
 }
 
 // #ifdef OLED_ENABLE
