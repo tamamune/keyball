@@ -78,7 +78,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     return state;
 }
 
-#ifdef OLED_ENABLE
+// #ifdef OLED_ENABLE
 
 // https://mazcon.hatenablog.com/entry/2023/11/20/022521
 #include "lib/oledkit/oledkit.h"
