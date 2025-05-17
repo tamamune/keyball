@@ -111,6 +111,7 @@ bool oled_task_user(void) {
     }
     return true;
 }
+#endif
 
 // キーマップの任意の場所に「OLED_IN」を追加 
 // 例：
