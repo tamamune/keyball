@@ -86,9 +86,22 @@ void oledkit_render_info_user(void) {
     keyball_oled_render_mymain();
 }
 
+// 画面は両側回転させるように修正します。
 oled_rotation_t oled_init_user(oled_rotation_t rotation) {
+    return OLED_ROTATION_270;
+}
+
+// サブ側OLEDの表示処理
+void oledkit_render_logo_user(void) {
+    keyball_oled_render_mysub();
+}
+
+// メイン、サブの判定
+bool oled_task_user(void) {
     if (is_keyboard_master()) {
-        return OLED_ROTATION_270;
+        oledkit_render_info_user();
+    } else {
+        oledkit_render_logo_user();
     }
-    return rotation;
+    return true;
 }
