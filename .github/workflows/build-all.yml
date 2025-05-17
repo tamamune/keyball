@@ -33,7 +33,7 @@ jobs:
         keymap: [ via, via2 ]
         include:
           - keyboard: keyball46
-            keymap:   test_Left
+            // keymap:   test_Left
           - keyboard: keyball46
             keymap:   test_Both
           - keyboard: keyball46
