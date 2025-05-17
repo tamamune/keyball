@@ -2,6 +2,11 @@
 
 #include "quantum.h"
 
+enum my_keyball_keycodes {
+    // 既存の末尾に追加
+    OLED_IN,  // OLED ページ変更
+};
+
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_universal(
@@ -106,11 +111,6 @@ bool oled_task_user(void) {
     }
     return true;
 }
-
-enum my_keyball_keycodes {
-    // 既存の末尾に追加
-    OLED_IN,  // OLED ページ変更
-};
 
 // キーマップの任意の場所に「OLED_IN」を追加 
 // 例：
