@@ -3,7 +3,6 @@
 
 #define LAYER_LED_ENABLE
 #include "layer_led.c"
-//#endif
 
 enum my_keyball_keycodes {
     // 既存の末尾に追加
