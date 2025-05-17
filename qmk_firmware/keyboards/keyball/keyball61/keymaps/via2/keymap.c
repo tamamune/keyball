@@ -1,9 +1,14 @@
 #include QMK_KEYBOARD_H
 #include "quantum.h"
 
+#define LAYER_LED_ENABLE
+#include "layer_led.c"
+#endif
+
 enum my_keyball_keycodes {
     // 既存の末尾に追加
     OLED_IN,  // OLED ページ変更
+    LAY_TOG = KEYBALL_SAFE_RANGE,
 };
 
 // clang-format off
@@ -21,7 +26,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______  , A(KC_ENT), KC_PGUP    , KC_UP    , KC_PGDN    , KC_VOLU  ,                                  XXXXXXX  , KC_P4    , KC_P5    , KC_P6    , KC_PAST  , XXXXXXX  ,
     XXXXXXX  , A(KC_X)  , KC_LEFT    , KC_SPC   , KC_RGHT    , KC_VOLD  ,                                  XXXXXXX  , KC_P1    , KC_P2    , KC_P3    , KC_PMNS  , XXXXXXX  ,
     XXXXXXX  , C(KC_M)  , S(KC_LEFT) , KC_DOWN  , S(KC_RGHT) , XXXXXXX  , XXXXXXX  ,            XXXXXXX  , XXXXXXX  , KC_P0    , XXXXXXX  , KC_PDOT  , KC_PPLS  , XXXXXXX  ,
-    XXXXXXX  , XXXXXXX  , XXXXXXX    , _______  , XXXXXXX    , OLED_IN  , XXXXXXX  ,            XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , _______  , _______
+    XXXXXXX  , XXXXXXX  , XXXXXXX    , _______  , XXXXXXX    , OLED_IN  , LAY_TOG  ,            XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , _______  , _______
   ),
 
   [2] = LAYOUT_universal(
@@ -47,14 +52,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______  , _______  , _______  , _______  , _______  , _______  , _______  ,            XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX
   ),
 };
-
 // clang-format on
-
-#define LAYER_LED_ENABLE
 
 layer_state_t layer_state_set_user(layer_state_t state) {
     // Auto enable scroll mode when the highest layer is 3
     keyball_set_scroll_mode(get_highest_layer(state) == 3);
+    change_layer_led_color(state);
     return state;
 }
 
@@ -96,10 +99,19 @@ bool oled_task_user(void) {
 //  [3] = LAYOUT_universal(
 //    RGB_TOG  , OLED_IN
 
+// キーマップの任意の場所に「LAY_TOG」を追加(機能の有効無効切り替えキー)
+// 例：
+//  [3] = LAYOUT_universal(
+//    RGB_TOG  , LAY_TOG  , 
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
+        #ifdef LAYER_LED_ENABLE
+        case LAY_TOG: toggle_layer_led(record->event.pressed); return true;
+        #endif
         // 既存switch文にcaseを追加
         case OLED_IN: change_page(record->event.pressed); return true;
+        #endif
         default: break;
     }
     return true;
