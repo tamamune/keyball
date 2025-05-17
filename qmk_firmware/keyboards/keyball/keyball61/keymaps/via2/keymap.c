@@ -13,7 +13,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [1] = LAYOUT_universal(
-    _______  , XXXXXXX  , XXXXXXX    , XXXXXXX  , XXXXXXX    , XXXXXXX  ,                                  KC_NUM   , KC_P7    , KC_P8    , KC_P9    , KC_PSLS  , XXXXXXX  ,
+    _______  , XXXXXXX  , XXXXXXX    , XXXXXXX  , XXXXXXX    , KC_MUTE  ,                                  KC_NUM   , KC_P7    , KC_P8    , KC_P9    , KC_PSLS  , XXXXXXX  ,
     _______  , A(KC_ENT), KC_PGUP    , KC_UP    , KC_PGDN    , KC_VOLU  ,                                  XXXXXXX  , KC_P4    , KC_P5    , KC_P6    , KC_PAST  , XXXXXXX  ,
     XXXXXXX  , A(KC_X)  , KC_LEFT    , KC_SPC   , KC_RGHT    , KC_VOLD  ,                                  XXXXXXX  , KC_P1    , KC_P2    , KC_P3    , KC_PMNS  , XXXXXXX  ,
     XXXXXXX  , C(KC_M)  , S(KC_LEFT) , KC_DOWN  , S(KC_RGHT) , XXXXXXX  , XXXXXXX  ,            XXXXXXX  , XXXXXXX  , KC_P0    , XXXXXXX  , KC_PDOT  , KC_PPLS  , XXXXXXX  ,
