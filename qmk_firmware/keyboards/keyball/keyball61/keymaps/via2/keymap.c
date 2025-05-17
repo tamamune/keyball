@@ -38,8 +38,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [4] = LAYOUT_universal(
     _______  , _______  , _______  , _______  , _______  , _______  ,                                  XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  ,
     _______  , _______  , _______  , _______  , _______  , _______  ,                                  XXXXXXX  , KC_LEFT  , KC_UP    , KC_RGHT  , XXXXXXX  , XXXXXXX  ,
-    _______  , _______  , _______  , _______  , _______  , _______  ,                                  XXXXXXX  , KC_BTN1  , KC_DOWN  , KC_BTN2  , KC_BTN3  , XXXXXXX  ,
-    _______  , _______  , _______  , _______  , _______  , _______  , _______  ,            XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  ,
+    _______  , _______  , _______  , _______  , _______  , _______  ,                                  XXXXXXX  , KC_BTN1  , KC_DOWN  , KC_BTN2  , XXXXXXX  , XXXXXXX  ,
+    _______  , _______  , _______  , _______  , _______  , _______  , _______  ,            XXXXXXX  , XXXXXXX  , XXXXXXX  , KC_BTN3  , XXXXXXX  , XXXXXXX  , XXXXXXX  ,
     _______  , _______  , _______  , _______  , _______  , _______  , _______  ,            XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX
   ),
 };
