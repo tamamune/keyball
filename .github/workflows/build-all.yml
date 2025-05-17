@@ -30,10 +30,12 @@ jobs:
     strategy:
       matrix:
         keyboard: [ keyball61 ]
-        keymap: [ via, via2 ]
+        keymap: [ via ]
         include:
-          - keyboard: keyball46
-            keymap:   test_Left
+          - keyboard: keyball61
+            keymap:   via2
+          // - keyboard: keyball46
+            //keymap:   test_Left
           // - keyboard: keyball46
             // keymap:   test_Both
           // - keyboard: keyball46
