@@ -31,7 +31,7 @@ jobs:
       matrix:
         keyboard: [ keyball61 ]
         keymap: [ via, via2 ]
-        // include:
+        include:
           // - keyboard: keyball46
             // keymap:   test_Left
           // - keyboard: keyball46
