@@ -93,16 +93,6 @@ bool oled_task_user(void) {
     return true;
 }
 
-// キーマップの任意の場所に「OLED_IN」を追加 
-// 例：
-//  [3] = LAYOUT_universal(
-//    RGB_TOG  , OLED_IN
-
-// キーマップの任意の場所に「LAY_TOG」を追加(機能の有効無効切り替えキー)
-// 例：
-//  [3] = LAYOUT_universal(
-//    RGB_TOG  , LAY_TOG  , 
-
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         #ifdef LAYER_LED_ENABLE
@@ -110,7 +100,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         #endif
         // 既存switch文にcaseを追加
         case OLED_IN: change_page(record->event.pressed); return true;
-        #endif
+        // #endif
         default: break;
     }
     return true;
