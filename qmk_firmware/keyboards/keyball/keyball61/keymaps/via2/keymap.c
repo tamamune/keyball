@@ -3,10 +3,10 @@
 
 #define LAYER_LED_ENABLE
 #include "layer_led.c"
+#endif
 
 enum my_keyball_keycodes {
-    // 既存の末尾に追加
-    OLED_IN,  // OLED ページ変更
+    OLED_IN,
     LAY_TOG = KEYBALL_SAFE_RANGE,
 };
 
