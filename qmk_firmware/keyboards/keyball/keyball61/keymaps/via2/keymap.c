@@ -66,16 +66,16 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 #include "lib/oledkit/oledkit.h"
 #include "custom_oled.c"
 
+// 画面は両側回転させるように修正します。
+oled_rotation_t oled_init_user(oled_rotation_t rotation) {
+    return OLED_ROTATION_270;
+}
+
 void oledkit_render_info_user(void) {
     // keyball_oled_render_keyinfo();
     // keyball_oled_render_ballinfo();
     // keyball_oled_render_layerinfo();
     keyball_oled_render_mymain();
-}
-
-// 画面は両側回転させるように修正します。
-oled_rotation_t oled_init_user(oled_rotation_t rotation) {
-    return OLED_ROTATION_270;
 }
 
 // サブ側OLEDの表示処理
@@ -92,6 +92,7 @@ bool oled_task_user(void) {
     }
     return true;
 }
+#endif
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
@@ -100,7 +101,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         #endif
         // 既存switch文にcaseを追加
         case OLED_IN: change_page(record->event.pressed); return true;
-        #endif
+        // #endif
         default: break;
     }
     return true;
