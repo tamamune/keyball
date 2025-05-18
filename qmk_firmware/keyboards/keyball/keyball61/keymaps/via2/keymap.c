@@ -102,9 +102,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         #ifdef LAYER_LED_ENABLE
         case LAY_TOG: toggle_layer_led(record->event.pressed); return true;
         #endif
-        // 既存switch文にcaseを追加
         case OLED_IN: change_page(record->event.pressed); return true;
-        // #endif
         default: break;
     }
     return true;
