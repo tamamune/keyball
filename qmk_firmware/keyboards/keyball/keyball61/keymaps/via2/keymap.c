@@ -21,19 +21,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
     //KC_MUTE KC_VOLU KC_VOLD
   [1] = LAYOUT_universal(
-    _______  , XXXXXXX  , XXXXXXX    , XXXXXXX  , XXXXXXX    , XXXXXXX  ,                                  KC_NUM   , KC_P7    , KC_P8    , KC_P9    , KC_PSLS  , XXXXXXX  ,
-    _______  , A(KC_ENT), KC_PGUP    , KC_UP    , KC_PGDN    , XXXXXXX  ,                                  XXXXXXX  , KC_P4    , KC_P5    , KC_P6    , KC_PAST  , XXXXXXX  ,
-    XXXXXXX  , A(KC_X)  , KC_LEFT    , KC_SPC   , KC_RGHT    , XXXXXXX  ,                                  XXXXXXX  , KC_P1    , KC_P2    , KC_P3    , KC_PMNS  , XXXXXXX  ,
-    XXXXXXX  , C(KC_M)  , S(KC_LEFT) , KC_DOWN  , S(KC_RGHT) , XXXXXXX  , XXXXXXX  ,            XXXXXXX  , XXXXXXX  , KC_P0    , XXXXXXX  , KC_PDOT  , KC_PPLS  , XXXXXXX  ,
-    XXXXXXX  , XXXXXXX  , XXXXXXX    , _______  , XXXXXXX    , OLED_IN  , LAY_TOG  ,            XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , _______  , _______
+    _______  , XXXXXXX  , XXXXXXX    , XXXXXXX  , XXXXXXX    , XXXXXXX  ,                                  KC_NUM   , KC_P7    , KC_P8    , KC_P9    , KC_PSLS  , _______  ,
+    _______  , A(KC_ENT), KC_PGUP    , KC_UP    , KC_PGDN    , XXXXXXX  ,                                  XXXXXXX  , KC_P4    , KC_P5    , KC_P6    , KC_PAST  , _______  ,
+    _______  , A(KC_X)  , KC_LEFT    , KC_SPC   , KC_RGHT    , XXXXXXX  ,                                  XXXXXXX  , KC_P1    , KC_P2    , KC_P3    , KC_PMNS  , _______  ,
+    _______  , C(KC_M)  , S(KC_LEFT) , KC_DOWN  , S(KC_RGHT) , XXXXXXX  , XXXXXXX  ,            XXXXXXX  , XXXXXXX  , KC_P0    , XXXXXXX  , KC_PDOT  , KC_PPLS  , _______  ,
+    _______  , XXXXXXX  , XXXXXXX    , _______  , XXXXXXX    , OLED_IN  , LAY_TOG  ,            XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , _______  , _______
   ),
 
   [2] = LAYOUT_universal(
     _______  , KC_F1    , KC_F2       , KC_F3       , KC_F4    , KC_F5    ,                                  KC_F6    , KC_F7    , KC_F8    , KC_F9    , KC_F10   , KC_F11   ,
     _______  , XXXXXXX  , KC_F11      , XXXXXXX     , XXXXXXX  , XXXXXXX  ,                                  XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , KC_F12   ,
-    XXXXXXX  , C(KC_A)  , MEH(KC_PGUP), MEH(KC_PGDN), KC_MINS  , XXXXXXX  ,                                  XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  ,
-    XXXXXXX  , C(KC_Z)  , C(KC_X)     , C(KC_C)     , C(KC_V)  , XXXXXXX  , XXXXXXX  ,            XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  ,
-    XXXXXXX  , XXXXXXX  , XXXXXXX     , XXXXXXX     , XXXXXXX  , XXXXXXX  , XXXXXXX  ,            XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , _______  , _______
+    _______  , C(KC_A)  , MEH(KC_PGUP), MEH(KC_PGDN), KC_MINS  , XXXXXXX  ,                                  XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  ,
+    _______  , C(KC_Z)  , C(KC_X)     , C(KC_C)     , C(KC_V)  , XXXXXXX  , XXXXXXX  ,            XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  ,
+    _______  , XXXXXXX  , XXXXXXX     , XXXXXXX     , XXXXXXX  , XXXXXXX  , XXXXXXX  ,            XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , _______  , _______
   ),
 
   [3] = LAYOUT_universal(
