@@ -1,6 +1,11 @@
 #include QMK_KEYBOARD_H
 #include "quantum.h"
 
+enum my_keyball_keycodes {
+    OLED_IN,
+    LAY_TOG = KEYBALL_SAFE_RANGE,
+};
+
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_universal(
@@ -47,11 +52,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 #ifdef LAYER_LED_ENABLE
 #include "layer_led.c"
 #endif
-
-enum my_keyball_keycodes {
-    OLED_IN,
-    LAY_TOG = KEYBALL_SAFE_RANGE,
-};
 
 layer_state_t layer_state_set_user(layer_state_t state) {
     // Auto enable scroll mode when the highest layer is 3
