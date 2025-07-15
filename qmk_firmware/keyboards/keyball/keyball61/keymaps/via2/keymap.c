@@ -2,8 +2,8 @@
 #include "quantum.h"
 
 enum my_keyball_keycodes {
-    OLED_IN,
-    LAY_TOG = KEYBALL_SAFE_RANGE,
+    LAY_TOG = KEYBALL_SAFE_RANGE, // レイヤーLEDトグル
+    OLED_IN,                      // OLED ページ変更
 };
 
 // clang-format off
